@@ -25,7 +25,7 @@ function App() {
       </Header>
       <Router>
         <Routes>
-          <Route path="/" element={<Body ></Body>}> </Route>
+        <Route path="/" element={<Body ></Body>}> </Route>
         <Route path="/hot" element={<Hot />}></Route>
         <Route path="/mydis" element={<MyForum></MyForum>}></Route>
         <Route path="/new" element={<New />}></Route>
