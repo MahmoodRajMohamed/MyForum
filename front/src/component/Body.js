@@ -18,7 +18,7 @@ function Body() {
     const id=useParams()
 
     useEffect(()=>{
-        axios.get("raj-forum.herokuapp.com/post").then((res)=>{
+        axios.get("https://raj-forum.herokuapp.com/post").then((res)=>{
             console.log(res.data.data)
             setData(res.data.data)
         })
