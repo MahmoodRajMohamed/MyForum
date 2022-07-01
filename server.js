@@ -1,6 +1,6 @@
 const http=require('http')
 const app=require('./app');
-const PORT=9000||process.env.PORT;
+const PORT=process.env.PORT||9000;
 
 
 const server=http.createServer(app);
