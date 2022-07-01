@@ -9,7 +9,9 @@ const postsroute=require('./api/routes/addPost')
 const userRoute=require('./api/routes/adduser')
 const nestRoute=require('./api/routes/nestComment')
 
-app.use(cors())
+app.use(cors({
+    origin:"*"
+}))
 mongoose.connect('mongodb+srv://Mahmood:Rfosm%40259@forumapp.agkymsk.mongodb.net/forumapp?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology: true });
 var db=mongoose.connection;
 
