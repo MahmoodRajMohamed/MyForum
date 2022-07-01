@@ -19,7 +19,7 @@ function MyForum() {
     },[])
     var dele=(tid)=>{
         console.log(tid)
-        axios.delete("http://localhost:9000/post/"+tid).then((res)=>{
+        axios.delete("https://raj-forum.herokuapp.com/post/"+tid).then((res)=>{
 console.log(res)
 window.location.reload()
         }).catch((err)=>{console.log(err)})

@@ -28,17 +28,17 @@ function Forum() {
      useEffect(()=>{
          console.log(id.id,"printing")
     
-         axios.get("http://localhost:9000/comment/"+parseInt(id.id)).then(res=>{
+         axios.get("https://raj-forum.herokuapp.com/comment/"+parseInt(id.id)).then(res=>{
         setData(res.data.data);  
      })
-     axios.get("http://localhost:9000/nest/"+parseInt(id.id)).then((res)=>{
+     axios.get("https://raj-forum.herokuapp.com/nest/"+parseInt(id.id)).then((res)=>{
         console.log(res.data.docs[0].title)
             setTitle(res.data.docs[0].title)
      })
      },[])
      var dele=(tid)=>{
         console.log(tid)
-        axios.delete("http://localhost:9000/comment/"+tid).then((res)=>{            
+        axios.delete("https://raj-forum.herokuapp.com/comment/"+tid).then((res)=>{            
                 window.location.reload()
         
         }).catch((err)=>{console.log(err)})
@@ -55,7 +55,7 @@ function Forum() {
                 "text":comments,
                 "cid":cid
             }
-            axios.post("http://localhost:9000/nest",comment).then(res=>{
+            axios.post("https://raj-forum.herokuapp.com/nest",comment).then(res=>{
                 console.log(res.data)
             })
         }
@@ -65,7 +65,7 @@ function Forum() {
                 "parent":parseInt(id.id),
                 "text":comments,
              }
-                 axios.post("http://localhost:9000/comment",comment).then(res=>{
+                 axios.post("https://raj-forum.herokuapp.com/comment",comment).then(res=>{
                      if(res.data[0].message=="Comment Added")
                      {
                         window.location.reload()
@@ -95,7 +95,7 @@ function Forum() {
             }
             // console.log(data1)
             
-            axios.get("http://localhost:9000/nest?data="+JSON.stringify(data1)).then((doc)=>{
+            axios.get("https://raj-forum.herokuapp.com/nest?data="+JSON.stringify(data1)).then((doc)=>{
         
                 doc.data.data.map(t1=>{
                     console.log(t1.text)

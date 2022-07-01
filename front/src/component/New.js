@@ -19,7 +19,7 @@ function New(props) {
             "desc":desc,
             "by":sessionStorage.getItem("user")
         }
-        axios.post("http://localhost:9000/post",data).then((res)=>{
+        axios.post("https://raj-forum.herokuapp.com/post",data).then((res)=>{
             console.log(res)
             props.show(true)
             window.location.reload()

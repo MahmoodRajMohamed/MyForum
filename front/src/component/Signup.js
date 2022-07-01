@@ -53,7 +53,7 @@ class Login extends Component{
             user:this.state.user
         }
 
-        axios.post('http://localhost:9000/user/signup',user)
+        axios.post('https://raj-forum.herokuapp.com/signup',user)
         .then((response) =>{console.log(response.data[0].status)
         if(response.data[0].status=="success")
         {

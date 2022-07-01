@@ -25,7 +25,7 @@ function Body() {
     },[])  
     var dele=(tid)=>{
         console.log(tid)
-        axios.delete("http://localhost:9000/post/"+tid).then((res)=>{
+        axios.delete("https://raj-forum.herokuapp.com/post/"+tid).then((res)=>{
             if(res.data.status=="success")
             {
                 window.location.reload()
